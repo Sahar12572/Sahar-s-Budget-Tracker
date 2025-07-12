@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pastel Budget Tracker</title>
+    <link rel="stylesheet" href="budget.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>💸 Sahar's Pastel Budget Tracker 💸</h1>
+        <p class="subtitle">Track your income, expenses & savings in style</p>
+      </header>
+
+      <section class="section">
+        <h2>Income 💼</h2>
+        <ul id="income-list" class="item-list"></ul>
+        <div class="form-row">
+          <input type="text" id="income-name" placeholder="Income Source" />
+          <input type="number" id="income-amount" placeholder="Amount" />
+          <select id="income-recurring">
+            <option value="true">Recurring</option>
+            <option value="false">One-time</option>
+          </select>
+          <button onclick="addIncome()">Add Income</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Expenses 💳</h2>
+        <ul id="expense-list" class="item-list"></ul>
+        <div class="form-row">
+          <input type="text" id="expense-name" placeholder="Expense" />
+          <input type="number" id="expense-amount" placeholder="Amount" />
+          <select id="expense-recurring">
+            <option value="true">Recurring</option>
+            <option value="false">One-time</option>
+          </select>
+          <button onclick="addExpense()">Add Expense</button>
+        </div>
+      </section>
+
+      <section class="section disposable">
+        <h2 id="disposable-income">Disposable Income: $0</h2>
+        <input type="number" id="savings-amount" placeholder="Saving Amount?" />
+        <button onclick="saveMoney()">Save</button>
+      </section>
+
+      <footer>
+        <p>🧠 Budget smarter. Spend wiser. Be fabulous. 🪙</p>
+      </footer>
+    </div>
+
+    <script src="budget.js"></script>
+  </body>
+</html>
